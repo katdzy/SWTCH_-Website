@@ -1,0 +1,422 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: #d8ecf1;
+}
+
+input, select, textarea, button, a {
+  outline: 0;
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #001640;
+}
+
+.header-row {
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* Align elements to the left */
+  align-items: center;
+  max-width: 1310px; /* Set a max-width to control content on large screens */
+  height: 45px;
+  margin: 28px auto; /* Center horizontally */
+  padding: 0 20px; /* Add some padding for small screens */
+}
+
+.logo {
+  width: 203px;
+  height: 45px;
+  background-size: cover;
+  margin-right: 50px; /* Space between logo and navigation */
+}
+
+nav {
+  display: flex;
+  gap: 40px; /* Add space between navigation items */
+}
+
+nav h3 {
+  color: #ffffff;
+  font-family: League Spartan, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.right-icons {
+  display: flex;
+  margin-left: auto; /* Push icons to the right */
+  gap: 10px; /* Add some spacing between icons */
+}
+
+.cart-icon,
+.search-icon {
+  width: 38px;
+  height: 38px;
+}
+
+.search-icon {
+  height: 35px;
+}
+
+body {
+  background: #d8ecf1;
+}
+
+input, select, textarea, button, a {
+  outline: 0;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline white;
+}
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 241.236px;
+  margin: 100px 0 0 -0.43px;
+}
+.header-title {
+  position: absolute;
+  height: 90px;
+  top: 170px;
+  left: 513.43px;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 70px;
+  font-weight: 800;
+}
+.message-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 470px;
+  height: 54px;
+  margin: 46.741px 0 0 485px;
+  color: #000000;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 54px;
+  text-align: center;
+}
+.rectangle {
+  position: relative;
+  width: 736px;
+  height: 589px;
+  margin: 12px 0 0 351px;
+  font-size: 0px;
+  background: #f2efef;
+  z-index: 12;
+  overflow: visible auto;
+  border-radius: 20px;
+}
+.description {
+  display: block;
+  position: relative;
+  height: 27px;
+  margin: 17px 0 0 189px;
+  color: #000000;
+  font-family: League Spartan, var(--default-font-family);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 19.32px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 13;
+}
+.name-email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 619px;
+  height: 37px;
+  margin: 26px 0 0 59px;
+  z-index: 17;
+}
+.name-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 300px;
+  height: 37px;
+  background: transparent;
+  border: 1px solid #4f4f4f;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: League Spartan, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 300;
+}
+ 
+
+.email-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 300px;
+  height: 37px;
+  background: transparent;
+  border: 1px solid #4f4f4f;
+  border-radius: 15px;
+  padding-left: 20px;
+  font-family: League Spartan, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 300;
+}
+
+
+.product-purchase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 320px;
+  position: relative;
+  width: 618px;
+  height: 37px;
+  margin: 26px 0 0 59px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid #4f4f4f;
+  z-index: 20;
+  background: transparent;
+  font-family: League Spartan, var(--default-font-family);
+  border-radius: 15px;
+  text-align: left;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+
+.assistance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 320px;
+  position: relative;
+  width: 618px;
+  height: 37px;
+  margin: 30px 0 0 59px;
+  padding-left: 20px;
+  border: 1px solid #4f4f4f;
+  z-index: 20;
+  background: transparent;
+  font-family: League Spartan, var(--default-font-family);
+  border-radius: 15px;
+  text-align: left;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  position: relative;
+  width: 617px;
+  height: 236px;
+  margin: 30px 0 0 60px;
+  padding: 15px 20px;
+  border: 1px solid #4f4f4f;
+  z-index: 26;
+  overflow: hidden;
+  border-radius: 15px;
+  background: transparent;
+  font-family: League Spartan, var(--default-font-family);
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 17px;
+}
+
+
+
+.submit {
+  position: relative;
+  width: 256px;
+  height: 55px;
+  background-color: #001640;
+  border-radius: 20px;
+  color: #ffffff;
+  font-family: League Spartan, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 14px 0 0 241px;
+  z-index: 30;
+}
+
+
+
+.email-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 470px;
+  height: 54px;
+  margin: 50px 0 0 482px;
+  color: #000000;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 54px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 45;
+}
+.email-bg {
+  position: relative;
+  width: 1442px;
+  height: 400px;
+  background-color: #D0CBCB;
+  z-index: 34;
+  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 51px;
+  justify-content: center;
+  padding-top: 61px;
+}
+.email-card {
+  width: 250px;
+  height: 250px;
+  font-size: 0px;
+  background: #f2efef;
+  border-radius: 20px;
+}
+.email-card span {
+  display: block;
+  position: relative;
+  height: 35px;
+  margin: 31px 0 0 67px;
+  color: #000000;
+  font-family: League Spartan, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 29.44px;
+  text-align: left;
+  white-space: nowrap;
+}
+.icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 15px 0 0 85px;
+}
+.email-add {
+  position: relative;
+  width: 182px;
+  height: 35px;
+  margin: 35px 0 0 34px;
+  color: #000000;
+  font-family: League Spartan, var(--default-font-family);
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 19.32px;
+  text-align: left;
+  z-index: 43;
+}
+
+footer {
+  width: 100%;
+  background-color: #001540;
+  color: #fff;
+  font-family: 'League Spartan', sans-serif;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo-section {
+  position: relative;
+  left: 72px; /* Align logo section 72px from the left */
+}
+
+.contact-list {
+  position: relative;
+  right: 163px; /* Align the contact list 163px from the right */
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.created-by-karl {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.placeholder {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 5px;
+  max-width: 449px;
+}
+
+.appendix {
+  display: flex;
+  gap: 200px; /* Gap of 102px between products and contact list */
+}
+
+.products {
+  position: relative;
+  right: 102px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+strong {
+  font-size: 18px;
+}
+

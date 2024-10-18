@@ -1,0 +1,695 @@
+
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #d8ecf1;
+}
+
+input,
+select,
+textarea,
+button,
+a {
+  outline: 0;
+  text-decoration: none;
+}
+
+/* Header and Nav Styles */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: #001640;
+}
+.header-row {
+  position: relative;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  max-width: 1310px; 
+  height: 45px;
+  margin: 28px auto; 
+  padding: 0 20px; 
+}
+.logo {
+  width: 203px;
+  height: 45px;
+  background-size: cover;
+  margin-right: 50px; 
+}
+nav {
+  display: flex;
+  gap: 40px; 
+}
+nav h3 {
+  color: #ffffff;
+  font-family: League Spartan, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.right-icons {
+  display: flex;
+  margin-left: auto;
+  gap: 10px; 
+}
+.cart-icon,
+.search-icon {
+  width: 38px;
+  height: 38px;
+}
+.search-icon {
+  height: 35px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; 
+  width: 250px;
+  height: 100%;
+  background-color: #001540;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: left 0.3s ease; 
+}
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+.sidebar-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 20px;
+}
+.sidebar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: League Spartan, sans-serif;
+}
+.sidebar-menu.active {
+  left: 0; 
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  left: 20px; 
+  top: 50%; 
+  transform: translateY(-50%);
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+nav a:hover {
+  text-decoration: underline white;
+}
+
+/* Hero Section */
+.hero-container {
+  position: relative; 
+  text-align: center; 
+  margin-top: 100px; 
+}
+.hero-image {
+  display: block;
+  width: 100%; 
+  height: auto;
+  margin-bottom: 91px;
+}
+.keyboard-caption {
+  color: #ffffff;
+  font-family: Poppins, sans-serif;
+  font-size: 70px; 
+  font-weight: 800;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: exclusion;
+  z-index: 1;
+}
+
+/* Top Picks Section */
+.top-picks-title {
+  display: block;
+  color: #000000;
+  font-family: Poppins, sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  margin-left: 100px;
+}
+.top-picks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 48px;
+  padding: 60px;
+  background-color: #d0cbcb;
+  margin-bottom: 37px;
+}
+.top-item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  width: 280px;
+  height: 280px;
+  border-radius: 15px;
+  font-family: League Spartan, sans-serif;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.top-rating {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.score {
+  font-size: 24px;
+  font-weight: 400;
+  margin-right: 5px;
+  color: #333;
+}
+.star {
+  margin-bottom: 5px;
+  width: 20px;
+  height: 20px;
+}
+.top-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  max-height: 150px;
+  object-fit: contain;
+}
+.top-info {
+  position: absolute;
+  bottom: 17px;
+  left: 20px;
+  text-align: left;
+}
+.top-name {
+  font-size: 21px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+.top-price {
+  font-size: 21px;
+  font-weight: 400;
+  color: #000;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* Keyboards Section */
+.all-keyboards {
+  display: block;
+  color: #000000;
+  font-family: Poppins, sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  margin-left: 126px;
+}
+.keyboard-thumb {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  margin: 0 auto 107px 120px;
+}
+
+/*Label Styles */
+.label-hobby,
+.label-compe,
+.label-gaming,
+.label-office,
+.label-ergo,
+.label-travel,
+.label-budget {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  color: white;
+  font-size: 21px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.label-hobby {
+  background-color: #964B00;
+}
+
+.label-compe {
+  background-color: #3F3F3F;
+}
+
+.label-gaming {
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(121, 98, 9, 1) 35%, rgba(0, 128, 255, 1) 100%);
+}
+
+.label-office {
+  background-color: #DFCBCB;
+  color: #000;
+}
+
+.label-ergo {
+  background-color: #00FA0A;
+  color: #000;
+}
+
+.label-travel {
+  background-color: #00C2FF;
+  color: #000;
+}
+
+.label-budget {
+  background-color: #FAFF00;
+  color: #000;
+}
+
+/* Item Styles*/
+.item-keyboard {
+  background-color: #f0f0f0; 
+  padding: 20px;
+  width: 380px;
+  height: 380px;
+  border-radius: 20px;
+  font-family: League Spartan, sans-serif;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.scores {
+  font-size: 24px;
+  font-weight: 400;
+  margin-right: 5px;
+  color: #333;
+}
+.stars {
+  margin-bottom: 5px;
+  width: 20px;
+  height: 20px;
+}
+.thumb {
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: 70px auto;
+  max-height: 150px;
+  object-fit: contain;
+}
+.info {
+  position: absolute;
+  bottom: 24px;
+  left: 18px;
+  text-align: left;
+}
+.name {
+  font-size: 21px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 15px;
+}
+.price {
+  font-size: 21px;
+  font-weight: 400;
+  color: #000;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*Hover Styles*/
+.top-item:hover,
+.item-keyboard:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 5px rgb(201, 201, 201);
+}
+
+.top-item:active,
+.item-keyboard:active {
+  transform: scale(0.95);
+  box-shadow: 10px 10px 5px rgb(70, 70, 70);
+}
+
+.item-keyboard .coffee {
+  transition: opacity 1s ease;
+}
+
+.item-keyboard:hover .coffee {
+  content: url(images/keyboard_products/coffee_angled.png);
+  transition: opacity 1s ease;
+}
+
+.item-keyboard:hover .retro {
+  content: url(images/keyboard_products/retro_angled.png);
+}
+
+.item-keyboard:hover .he {
+  content: url(images/keyboard_products/he_angled.png);
+}
+
+.item-keyboard:hover .gaming {
+  content: url(images/keyboard_products/mini_angled.png);
+}
+
+.item-keyboard:hover .k5 {
+  content: url(images/keyboard_products/k5_angled.png);
+}
+
+.item-keyboard:hover .q8 {
+  content: url(images/keyboard_products/q8_angled.png);
+}
+
+.item-keyboard:hover .fold {
+  content: url(images/keyboard_products/fold_angled.png);
+}
+
+.item-keyboard:hover .t62 {
+  content: url(images/keyboard_products/t62_angled.png);
+}
+
+.item-keyboard:hover .k12 {
+  content: url(images/keyboard_products/k12_angled.png);
+}
+
+/* Footer Styles */
+footer {
+  width: 100%;
+  background-color: #001540;
+  color: #fff;
+  font-family: 'League Spartan', sans-serif;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+.logo-section {
+  position: relative;
+  left: 72px; 
+}
+.contact-list {
+  position: relative;
+  right: 163px; 
+}
+.footer-logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+.created-by-karl {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.placeholder {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 5px;
+  max-width: 449px;
+}
+.appendix {
+  display: flex;
+  gap: 200px; 
+}
+.products {
+  position: relative;
+  right: 102px;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+footer li a{
+  color: #fff;
+  text-decoration: none;
+}
+strong {
+  font-size: 18px;
+}
+
+/* Large Tablet Styles */
+@media (max-width: 900px) {
+/* Large Tablet Header Styles */
+  header {
+    background-color: #001540;
+  }
+  .header-row {
+    justify-content: center; 
+  }
+  nav {
+    display: none; 
+  }
+  .right-icons {
+    position: absolute;
+    right: 20px; 
+    top: 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .logo {
+    margin-left: 50px; 
+  }
+
+/* Large Tablet Keyboard Section */
+  .all-keyboards {
+    margin-left: 0;
+    text-align: center;
+  }
+  .keyboard-thumb {
+    margin: 20px 15px;
+    justify-content: center;
+    gap: 20px;
+  }
+  .item-keyboard {
+    width: 240px;
+    height: 240px;
+  }
+  .label-hobby, .label-gaming, 
+  .label-ergo, .label-travel, 
+  .label-compe, .label-budget, 
+  .label-office {
+    left: 10px;
+    top: 10px;
+    font-size: 16px;
+  }
+  .rating {
+    top: 10px;
+    right: 10px;
+  }
+  .thumb {
+    width: 180px;
+    max-height: 150px;
+    margin-top: 40px;
+  }
+  .name, .price, .scores {
+    font-size: 17px;
+  }
+  .name {
+    margin-bottom: 2px;
+  }
+  .info {
+    bottom: 10px;
+    left: 10px;
+  }
+}
+/*Tablet Styles */
+@media (max-width: 768px) {
+/*Tablet Top Picks Section */
+  .keyboard-caption {
+    font-size: 40px; 
+    top: 55%;
+  }
+  .top-picks-title {
+    margin-left: 0;
+    text-align: center;
+  }
+  .top-picks {
+    gap: 30px; 
+    padding: 30px;
+  }
+  .top-item {
+    width: 240px;
+    height: 240px; 
+  }
+  .score, .top-name, .top-price {
+    font-size: 18px; 
+  }
+  .star {
+    width: 18px;
+    height: 18px;
+  }
+
+/* Tablet Footer Styles */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .appendix {
+    gap: 40px; 
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-section,
+  .products,
+  .contact-list {
+    position: static; 
+    text-align: center;
+    margin: 10px 0;
+  }
+  .placeholder {
+    max-width: 100%; 
+  }
+  .footer-logo {
+    width: 120px; 
+  }
+  .contact-list li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /*Mobile header*/
+    .header-row {
+      padding: 0 10px; 
+    }
+    .right-icons {
+      right: 10px;
+    }
+    .logo {
+      width: 150px;
+      height: 33.01px; 
+    }
+    .cart-icon,
+    .search-icon {
+      width: 30px;
+      height: 30px;
+    }
+
+/*Mobile Styles*/
+    .keyboard-caption {
+      font-size: 30px; 
+      top: 50%;
+    }
+    .top-picks-title {
+      font-size: 2rem;
+      text-align: center;
+      margin: 0;
+    }
+    .top-picks {
+      gap: 20px;
+      padding: 10px;
+    }
+    .top-item {
+      width: 164px;
+      height: 164px; 
+    }
+    .top-rating{
+      left: 10px;
+      top: 10px;
+    }
+    .top-img {
+      max-height: 100px;
+      margin-top: 23px;
+    }
+    .score, .top-name, .top-price {
+      font-size: 14px;
+    }
+    .top-info {
+      bottom: 10px;
+      left: 10px;
+    }
+    .star {
+      width: 16px;
+      height: 16px;
+    }
+
+/*Mobile Keyboard List */
+    .keyboard-thumb {
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+    .item-keyboard {
+      width: 166px;
+      height: 166px;
+    }
+    .label-hobby, .label-gaming, .label-ergo, .label-travel, .label-compe, .label-budget, .label-office {
+      left: 10px;
+      top: 10px;
+      font-size: 16px;
+    }
+    .rating {
+      top: 10px;
+      right: 10px;
+    }
+    .thumb {
+      width: 130px;
+      max-height: 100px;
+      margin-top: 20px;
+    }
+    .name, .price, .scores {
+      font-size: 15px;
+    }
+    .name {
+      margin-bottom: 2px;
+    }
+    .info {
+      bottom: 10px;
+      left: 10px;
+    }
+  }
+
+  

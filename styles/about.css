@@ -1,0 +1,547 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: #d8ecf1;
+}
+
+input, select, textarea, button, a {
+  outline: 0;
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: #001640;
+}
+
+.header-row {
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* Align elements to the left */
+  align-items: center;
+  max-width: 1310px; /* Set a max-width to control content on large screens */
+  height: 45px;
+  margin: 28px auto; /* Center horizontally */
+  padding: 0 20px; /* Add some padding for small screens */
+}
+
+.logo {
+  width: 203px;
+  height: 45px;
+  background-size: cover;
+  margin-right: 50px; /* Space between logo and navigation */
+}
+
+nav {
+  display: flex;
+  gap: 40px; /* Add space between navigation items */
+}
+
+nav h3 {
+  color: #ffffff;
+  font-family: League Spartan, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.right-icons {
+  display: flex;
+  margin-left: auto; /* Push icons to the right */
+  gap: 10px; /* Add some spacing between icons */
+}
+
+.cart-icon,
+.search-icon {
+  width: 38px;
+  height: 38px;
+}
+
+.search-icon {
+  height: 35px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Start the sidebar off-screen to the left */
+  width: 250px;
+  height: 100%;
+  background-color: #001540;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1); /* Right shadow */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: left 0.3s ease; /* Animate the sidebar sliding in */
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.sidebar-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 20px;
+}
+
+.sidebar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-family: League Spartan, sans-serif;
+}
+
+/* Active sidebar state */
+.sidebar-menu.active {
+  left: 0; /* Slide the sidebar in from the left */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  left: 20px; /* Move the hamburger to the left side */
+  top: 50%; /* Vertically center the hamburger */
+  transform: translateY(-50%);
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  text-decoration: underline white;
+}
+
+
+.hero-container {
+  position: relative; /* Create a positioning context for absolute positioning */
+  text-align: center; /* Center text in the container */
+  margin-top: 100px; /* Prevent hero image from being covered by the sticky header */
+}
+
+.hero-image {
+  display: block;
+  width: 100%; /* Ensure the image fills the width of the container */
+  height: auto; /* Maintain the aspect ratio of the image */
+  margin-bottom: 91px;
+}
+
+.header-caption {
+  color: #ffffff;
+  font-family: Poppins, sans-serif;
+  font-size: 70px; /* Base font size for larger screens */
+  font-weight: 800;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+
+/* About Section */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  width: 100%; /* Full width */ 
+  height: auto; /* Auto height for flexibility */
+  padding: 37px; /* Center the section */
+  flex-direction: row;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 20px; /* Space between elements */
+}
+
+.about-content {
+  flex-shrink: 0;
+  position: relative;
+  width: 100%; /* Full width for mobile */
+  max-width: 700px; /* Max width to prevent stretching */
+  height: auto;
+  font-size: 0px;
+  background: #f2efef;
+  z-index: 11;
+  border-radius: 20px;
+  padding: 37.5px; /* Add padding for better spacing */
+}
+
+.about-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%; /* Full width */
+  max-width: 282px; /* Keep it smaller on large screens */
+  height: auto;
+  
+  margin: 26px 0 0;
+  color: #000000;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 36px; /* Reduced for better responsiveness */
+  font-weight: 800;
+  line-height: 36px;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 12;
+}
+
+.about-body {
+  position: relative;
+  width: 100%; /* Full width */
+  max-width: 664px;
+  height: auto;
+  margin: 16px 0 0;
+  font-family: League Spartan, var(--default-font-family);
+  font-size: 19px; /* Reduced for smaller screens */
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  z-index: 13;
+}
+
+.about-image {
+  width: 100%; /* Full width */
+  max-width: 582px; /* Limit image size */
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Product Section */
+.product-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: #001640;
+  padding: 20px;
+  display: flex;
+  flex-direction: row; /* Stack content on mobile */
+  gap: 20px;
+}
+
+.product-image {
+  width: 100%; /* Full width */
+  max-width: 600px; /* Limit image size */
+  height: auto;
+  border-radius: 20px;
+  margin: 0 auto; /* Center image */
+}
+
+.product-content {
+  position: relative;
+  width: 100%; /* Full width */
+  max-width: 719px; /* Limit content width */
+  height: auto;
+  background: rgba(113, 113, 113, 0.35);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  padding: 112px 20px 0 40px; /* Padding for better spacing */
+  margin: 0 auto; /* Center content */
+}
+
+.product-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  max-width: 562px;
+  height: auto;
+  margin: 20px 0;
+  color: #ffffff;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 36px; /* Reduced for better responsiveness */
+  font-weight: 800;
+  line-height: 36px;
+  text-align: center;
+}
+
+.product-body {
+  display: flex;
+  position: relative;
+  width: 100%; /* Full width */
+  max-width: 598px;
+  height: auto;
+  margin: 20px 0;
+  color: #ffffff;
+  font-family: League Spartan, var(--default-font-family);
+  font-size: 19px; /* Reduced for smaller screens */
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column-reverse; /* Stack elements vertically on smaller screens */
+    margin: 0 auto;
+  }
+
+  .product-section {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    margin: 0 auto;
+  }
+  .about-title, .product-title {
+    font-size: 20px; /* Smaller font size for mobile */
+  }
+
+  .about-body, .product-body {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title, .product-title {
+    font-size: 18px;
+  }
+
+  .about-body, .product-body {
+    font-size: 14px;
+  }
+}
+
+
+footer {
+  width: 100%;
+  background-color: #001540;
+  color: #fff;
+  font-family: 'League Spartan', sans-serif;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo-section {
+  position: relative;
+  left: 72px; /* Align logo section 72px from the left */
+}
+
+.contact-list {
+  position: relative;
+  right: 163px; /* Align the contact list 163px from the right */
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.created-by-karl {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.placeholder {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 5px;
+  max-width: 449px;
+}
+
+.appendix {
+  display: flex;
+  gap: 200px; /* Gap of 102px between products and contact list */
+}
+
+.products {
+  position: relative;
+  right: 102px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+footer li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+strong {
+  font-size: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .discover-caption {
+    font-size: 50px; /* Reduce the font size on medium screens */
+    top: 60%; /* Adjust positioning slightly */
+  }
+}
+
+@media (max-width: 768px) {
+  .discover-caption {
+    font-size: 40px; /* Smaller font size for tablets */
+    top: 55%;
+  }
+}
+
+@media (max-width: 480px) {
+  .discover-caption {
+    font-size: 30px; /* Smallest font size for mobile devices */
+    top: 50%;
+  }
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .header-caption {
+    font-size: 50px; /* Reduce the font size on medium screens */
+    top: 60%; /* Adjust positioning slightly */
+  }
+}
+
+@media (max-width: 768px) {
+  .header-caption {
+    font-size: 40px; /* Smaller font size for tablets */
+    top: 55%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-caption {
+    font-size: 30px; /* Smallest font size for mobile devices */
+    top: 50%;
+  }
+}
+
+
+@media (max-width: 900px) {
+  header {
+    background-color: #001540;
+  }
+
+  .header-row {
+    justify-content: center; /* Center the logo and icons */
+  }
+
+  nav {
+    display: none; /* Hide the navigation when the screen is small */
+  }
+
+  .right-icons {
+    position: absolute;
+    right: 20px; /* Move icons to the right */
+    top: 0;
+  }
+
+  /* Show hamburger menu */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Adjust logo when hamburger is on the left */
+  .logo {
+    margin-left: 50px; /* Adjust the logo's margin to avoid overlap with the hamburger */
+  } 
+}
+
+
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center; /* Center the content */
+  }
+
+  .appendix {
+    gap: 40px; /* Reduce gap for small screens */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-section,
+  .products,
+  .contact-list {
+    position: static; /* Remove any absolute positioning */
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .placeholder {
+    max-width: 100%; /* Ensure the text wraps on smaller screens */
+  }
+
+  .footer-logo {
+    width: 120px; /* Reduce logo size on small screens */
+  }
+
+  .contact-list li {
+    font-size: 14px; /* Smaller font size for contact details */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .header-row {
+      padding: 0 10px; /* Reduce padding on very small screens */
+    }
+  
+    .right-icons {
+      right: 10px;
+    }
+  
+    .logo {
+      width: 150px;
+      height: 33.01px; /* Scale down the logo */
+    }
+  
+    .cart-icon,
+    .search-icon {
+      width: 30px; /* Scale down the icons */
+      height: 30px;
+    }
+}
+
